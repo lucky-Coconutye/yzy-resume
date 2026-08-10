@@ -1,0 +1,92 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external}
+%\usepackage{zh_CN-Adobefonts_internal}
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{graphicx}
+
+\begin{document}
+\pagenumbering{gobble}
+\small
+
+\noindent
+\begin{minipage}[c]{0.86\textwidth}
+  \centering
+  {\Huge 叶子钰\par}
+  \vspace{1.0ex}
+  {\sffamily\footnotesize 18784066583（微信同号） \textperiodcentered\ 3217524535@qq.com \textperiodcentered\ 27届 | 23岁 | 中共党员 \textperiodcentered\ AI Agent 产品实习生\par}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.10\textwidth}
+  \raggedleft
+  \includegraphics[width=0.62in]{assets/profile.jpg}
+\end{minipage}
+\vspace{0.8ex}
+
+\section{教育背景}
+\datedsubsection{\textbf{湖南大学}, 软件工程, \textit{硕士（保研） | \textcolor{RoyalBlue}{985/211/双一流}}}{2024.09 - 2027.06}
+\begin{itemize}
+  \item 学业情况：学业一等奖学金，发明专利 1 项。
+  \item 英语水平：雅思 7.5，六级 569。
+\end{itemize}
+
+\datedsubsection{\textbf{中国地质大学（武汉）}, 智能科学与技术, \textit{本科 | \textcolor{RoyalBlue}{211/双一流}}}{2020.09 - 2024.06}
+\begin{itemize}
+  \item 专业成绩：绩点 GPA 3.71/5.0，百分制 89.81/100，排名 7/59。
+  \item 主修课程：自然语言处理（92）、深度学习基础（90）、机器学习（95）。
+  \item 竞赛奖项：第十一届“泰迪杯”数据挖掘挑战赛全国二等奖、湖北省省级大创项目。
+  \item 荣誉情况：国家励志奖学金 2 次、英才工程奖学金 3 次、校级优秀学生标兵。
+  \item 交流项目：经校内选拔获全额资助参与马来西亚理工大学“商业分析”项目并顺利结业。
+\end{itemize}
+
+\section{实习经历}
+\datedsubsection{\textbf{美团}, 核心本地商业 - 美团平台 - BA Agent, \textit{Agent 产品实习生}}{2026.01 - 2026.05}
+\begin{itemize}
+  \item \textbf{AI 竞品调研与产品方案设计：}独立完成 6 家头部 AI 分析产品竞品研究，提炼差异化推广策略；针对 BA Agent 新用户冷启动问题，设计灵感推荐、案例广场等核心模块，撰写 PRD 并推动研发落地；独立搭建含前后端的 MVP，方案支撑管理层产品方向决策。
+  \item \textbf{BA Agent 评测体系构建：}参与商业分析场景评测集 0 到 1 建设，将商业分析流程拆解为 3 大阶段、12 个二级场景，覆盖销售、运营、商分、产品 4 类核心角色；设计评测价值评分框架，通过 LLM 对数万条用户 query 自动化打分筛选，按业务重要性分层抽样组卷并引入外部数据对照，交付 Benchmark 作为模型评估与产品迭代核心依据。
+  \item \textbf{站外热词 Skill 全链路建设：}重构商分团队站外热词分析流程，产出 hotwords-analysis skill，并从 Agent 日志中捞取相关 case 跑通端到端验证，经业务方评审后使用；推动新增小红书和点评数据源，测试通过后在 BA Agent 上线。
+  \item \textbf{Skill 生命周期管理：}参与部门 AI Agent 能力层建设，推进 Skill Factory、分发协议和 Golden Set 引擎三大模块，实现从需求到评估的闭环，支持 AI Agent 规模化高质量交付。
+\end{itemize}
+
+\datedsubsection{\textbf{北京月之暗面科技有限公司（Moonshot AI）}, Search \& Rec, \textit{AI 产品实习生}}{2025.08 - 2025.11}
+\begin{itemize}
+  \item \textbf{社区内部 Agent 设计：}横向研究前沿 AI Native 应用和互联网应用的 AI+ 动作，探索并设计 Kimi“发现”社区下的 Agent 智能体；跟踪数据指标并设计模型兜底策略，为社区产品功能迭代提供决策依据。
+  \item \textbf{核心功能优化提需：}主导社区动态发布页、智能体主页等关键模块优化，独立完成 PRD 撰写和原型图绘制，提升社区中用户内容发现效率与互动频率。
+  \item \textbf{内容运营：}参与内测阶段冷启动策略与宣发执行，持续迭代优化智能体 Prompt，提升内容生成效率与质量。
+\end{itemize}
+
+\section{科研经历}
+\datedsubsection{\textbf{基于 VLM 语义引导与 MoE 混合的多模态目标重识别}, \textit{独立完成 | 专利 1 项}}{}
+\begin{itemize}
+  \item \textbf{项目地址：}\textit{https://github.com/lucky-Coconutye/SemMoE-ReID}
+  \item 针对多模态行人与车辆重识别中跨模态特征对齐不足、视觉语义利用不充分的问题，基于 MambaPro 复现并改进 RGB-NIR-T 多模态 ReID 框架，完成数据处理、模型训练、消融实验与结果分析全流程。
+  \item 设计多尺度 MoE 特征增强模块，对 ViT patch tokens 进行多尺度滑动窗口池化，并通过门控网络实现样本级自适应专家选择；经消融验证双尺度配置最优，使 RGBNT100 车辆数据集 mAP 从 84.8\% 提升至 86.2\%。
+  \item 引入 QwenVL 为多模态图像生成文本语义描述，使用 CLIP 编码为语义特征，并设计模态内语义引导（IMSG）与跨模态文本融合（CMTF）机制，提升视觉特征的语义判别能力。
+  \item 在 RGBNT201 行人数据集 mAP 达到 80.5\%（+2.4\%），RGBNT100 车辆数据集 mAP 达到 87.9\%（+3.1\%）；完成 t-SNE 特征分布、跨模态检索结果和消融实验可视化，验证方法有效性。
+\end{itemize}
+
+\newpage
+\section{技术能力}
+\begin{itemize}
+  \item \textbf{AI / Agent：}熟悉 Prompt 设计、Skills / MCP / Agent Workflow / Tool Calling，深度使用 Codex、Claude、Cursor 等 AI 编程工具，可快速完成 AI Demo 搭建与功能验证。
+  \item \textbf{算法研发：}熟悉机器学习、深度学习与多模态学习基本范式，具备前沿论文复现、模型模块改进、训练调参、消融实验与结果分析经验，能够围绕指标提升完成实验设计与迭代优化。
+  \item \textbf{数据分析：}熟悉 SQL、Python、Excel，了解用户行为分析、漏斗分析、A/B Test、指标体系搭建、异常检测与归因分析方法。
+  \item \textbf{前端开发：}熟悉 HTML、CSS、JavaScript、TypeScript、React、Vue3，具备基于 Vite、Ant Design、ECharts 的前端页面开发、组件化构建、数据可视化与前后端接口联调经验。
+\end{itemize}
+
+\section{项目经历}
+\datedsubsection{\textbf{基于 LangGraph 的智能商业分析 Agent 系统}}{个人项目}
+\begin{itemize}
+  \item \textbf{项目地址：}\textit{https://github.com/Crdothebest/coco-ba-agent}
+  \item 基于 LangGraph + Claude Sonnet 4.5 构建智能数据分析 Agent，用户通过自然语言即可完成数据异常检测、归因分析、图表生成与分析报告输出。
+  \item 负责前端开发，基于 Vite + React + TypeScript + Ant Design 搭建 Agent 交互控制台，集成 ECharts 实现分析结果动态图表渲染与执行流程可视化。
+  \item 完成前后端联调，实现 Agent 多轮对话的流式响应展示与工具调用状态追踪；参与部分后端 API 调试与修改，协助完善前后端数据交互格式。
+\end{itemize}
+
+\section{个人总结}
+本人具备计算机本硕背景与 AI 产品实习经历，对大模型、Agent、多模态等 AI 技术在产品场景中的应用保持持续关注；能够结合用户需求和业务目标参与功能设计、Prompt / Workflow 设计、原型搭建与数据分析，并在实习与项目中积累了与算法、工程团队协作推进 AI 功能落地的经验。希望在 AI 产品方向持续学习和深入实践。
+
+\end{document}
