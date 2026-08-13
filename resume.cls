@@ -20,8 +20,8 @@
 \RequirePackage{xeCJK}
 \setmainfont{TeX Gyre Termes}
 \setsansfont{TeX Gyre Heros}
-\setCJKmainfont[BoldFont=Noto Sans CJK SC]{Noto Sans CJK SC}
-\setCJKsansfont[BoldFont=Noto Sans CJK SC]{Noto Sans CJK SC}
+\setCJKmainfont[BoldFont=NotoSansCJKsc-Bold.otf]{NotoSansCJKsc-Regular.otf}
+\setCJKsansfont[BoldFont=NotoSansCJKsc-Bold.otf]{NotoSansCJKsc-Regular.otf}
 
 \RequirePackage[
 	a4paper,
