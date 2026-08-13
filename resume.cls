@@ -34,10 +34,10 @@
 
 \RequirePackage{titlesec}
 \RequirePackage{enumitem}
-\setlist{noitemsep} % removes spacing from items but leaves space around the whole list
-%\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
+% Keep the resume compact but avoid overly tight bullet spacing.
+\setlist{itemsep=0.10em, parsep=0pt, partopsep=0pt}
+\setlist[itemize]{topsep=0.30em, leftmargin=1.5pc}
+\setlist[enumerate]{topsep=0.30em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
