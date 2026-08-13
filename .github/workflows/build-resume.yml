@@ -33,9 +33,22 @@ jobs:
 
       - name: Build PDF
         run: |
-          xelatex -interaction=nonstopmode -halt-on-error resume-zh_CN.tex
+          set +e
+          xelatex -interaction=nonstopmode -halt-on-error resume-zh_CN.tex > build-resume.log 2>&1
+          status=$?
+          cat build-resume.log
+          if [ "$status" -ne 0 ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add build-resume.log
+            git commit -m "Record resume build failure"
+            git push
+            exit "$status"
+          fi
+          set -e
           xelatex -interaction=nonstopmode -halt-on-error resume-zh_CN.tex
           mv resume-zh_CN.pdf "湖南大学计算机硕士-叶子钰.pdf"
+          rm -f build-resume.log
 
       - name: Commit generated PDF
         run: |
