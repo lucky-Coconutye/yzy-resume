@@ -1,0 +1,50 @@
+name: Build resume PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "resume-zh_CN.tex"
+      - "resume.cls"
+      - "linespacing_fix.sty"
+      - "assets/**"
+      - ".github/workflows/build-resume.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install XeLaTeX and CJK fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-lang-chinese \
+            fonts-noto-cjk
+          fc-cache -f
+
+      - name: Build PDF
+        run: |
+          xelatex -interaction=nonstopmode -halt-on-error resume-zh_CN.tex
+          xelatex -interaction=nonstopmode -halt-on-error resume-zh_CN.tex
+          mv resume-zh_CN.pdf "湖南大学计算机硕士-叶子钰.pdf"
+
+      - name: Commit generated PDF
+        run: |
+          if git diff --quiet -- "湖南大学计算机硕士-叶子钰.pdf"; then
+            echo "PDF is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "湖南大学计算机硕士-叶子钰.pdf"
+          git commit -m "Build updated resume PDF"
+          git push
