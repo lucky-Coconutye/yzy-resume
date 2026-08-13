@@ -30,6 +30,9 @@ jobs:
             texlive-lang-chinese \
             fonts-noto-cjk
           fc-cache -f
+          mkdir -p fonts
+          cp /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc fonts/NotoSansCJK-Regular.ttc
+          cp /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc fonts/NotoSansCJK-Bold.ttc
 
       - name: Build PDF
         run: |
