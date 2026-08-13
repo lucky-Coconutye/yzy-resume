@@ -70,13 +70,21 @@ put line 266.
 (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty)
 (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/nth/nth.sty)) (./linespacing_fix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty)
 
-! Package fontspec Error: The font "Noto Sans CJK SC Regular" cannot be found.
+! LaTeX Error: Option clash for package hyperref.
 
-For immediate help type H <return>.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 ...ans CJK SC Bold]{Noto Sans CJK SC Regular}
-                                                  
+l.11 \newcommand
+                {\projectlink}[2]{\href{#1}{\textcolor{gray}{\textbf{\textit...
 No pages of output.
 Transcript written on resume-zh_CN.log.
