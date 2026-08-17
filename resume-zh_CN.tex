@@ -89,7 +89,7 @@
   \item \textbf{项目地址：}\projectlink{https://github.com/lucky-Coconutye/SemMoE-ReID}{https://github.com/lucky-Coconutye/SemMoE-ReID}
   \item 针对多模态行人与车辆重识别中跨模态特征对齐不足、视觉语义利用不充分的问题，基于 \textbf{MambaPro} 复现并改进 RGB-NIR-T 多模态 ReID 框架，完成数据处理、模型训练、消融实验与结果分析\textbf{全流程}。
   \item 设计\textbf{多尺度 MoE 特征增强}模块，对 ViT patch tokens 进行多尺度滑动窗口池化，并通过门控网络实现样本级自适应专家选择；经消融验证双尺度配置最优，使 RGBNT100 车辆数据集 mAP 从 84.8\% 提升至 86.2\%。
-  \item 引入 \textbf{QwenVL} 为多模态图像生成文本语义描述，使用 CLIP 编码为语义特征，并设计模态内\textbf{语义引导（IMSG）}与跨模态文本融合（CMTF）机制，提升视觉特征的语义判别能力。
+  \item 引入 \textbf{QwenVL} 为多模态图像生成文本语义描述，使用 CLIP 编码为语义特征，并设计模态内\textbf{语义引导（IMSG）}与\textbf{跨模态文本融合（CMTF）}机制，提升视觉特征的语义判别能力。
   \item 在 RGBNT201 行人数据集 mAP 达到 80.5\%\textbf{（+2.4\%）}，RGBNT100 车辆数据集 mAP 达到 87.9\%\textbf{（+3.1\%）}；完成 t-SNE 特征分布、跨模态检索结果和消融实验可视化，验证方法有效性。
 \end{itemize}
 
